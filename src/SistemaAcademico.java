@@ -9,7 +9,7 @@ public class SistemaAcademico {
 		Scanner e = new Scanner(System.in);
 		do{
 			System.out.println("\nSistema de Alunos de uma Instuição\n");
-			System.out.println("1-Cadastrar aluno \n2-Listar Aluno \n3-Remover Aluno \n4-Altarar Aluno");
+			System.out.println("1-Cadastrar aluno \n2-Listar Aluno \n3-Remover Alno \n4-Altarar Aluno");
 			opção =e.nextInt();
 			switch( opção )
 			{
