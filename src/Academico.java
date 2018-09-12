@@ -11,7 +11,7 @@ public class Academico {
 		
 		Aluno aluno = new Aluno();
 		
-		System.out.println("Informe a matricula do Aluno: ");
+		System.out.println("Informde a matricula do Aluno: ");
 		aluno.setMatricula(eMatricula.next());
 		
 		System.out.println("Informe o nome do Aluno: ");

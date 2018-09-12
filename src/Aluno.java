@@ -3,6 +3,7 @@ public class Aluno {
 	
 	private	String matricula;
 	private String nome;
+	private String telefone;
 
 	public String getMatricula() {
 		return matricula;
