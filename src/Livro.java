@@ -5,6 +5,7 @@ public class Livro {
 	private String autor;
 	private String ISBN;
 	private String editora;
+	
 	public String getTitulo() {
 		return titulo;
 	}
