@@ -4,7 +4,7 @@ public class Academico {
 	
 	ArrayList<Aluno> alunos = new ArrayList<Aluno>(); 
 	
-	public void CadastrarAluno(){
+	public void cadastrarAluno(){
 		
 		Scanner eMatricula = new Scanner(System.in);
 		Scanner bNome= new Scanner(System.in);
@@ -43,13 +43,17 @@ public class Academico {
 		System.out.println("Informe o Indice que deseja remover: ");
 		//int i= e.nextInt();
 		alunos.remove(e.nextInt());
+		System.out.println("\nAluno Removido: ");
+		
 		
 		
 	
 	}
 	
 	public void alterarAluno(){
-		//TODO
+		listarAlunos();
+		
+		
 	}
 	
 }

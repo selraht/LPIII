@@ -10,11 +10,12 @@ public class SistemaAcademico {
 		do{
 			System.out.println("\nSistema de Alunos de uma Instuição:\n");
 			System.out.println("1-Cadastrar aluno \n2-Listar Aluno \n3-Remover Alno \n4-Altarar Aluno");
+			System.out.print("\nDigite sua Opção:");
 			opção =e.nextInt();
 			switch( opção )
 			{
 			    case 1:
-			    	academico.CadastrarAluno();  
+			    	academico.cadastrarAluno();  
 			            break;
 			    
 			    case 2:
