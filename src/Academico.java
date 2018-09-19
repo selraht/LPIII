@@ -51,7 +51,28 @@ public class Academico {
 	}
 	
 	public void alterarAluno(){
+		Scanner ematricula = new Scanner(System.in);
+		Scanner enome = new Scanner(System.in);
+		
 		listarAlunos();
+		
+		System.out.println("Informe o Indice do Aluno que desejar alterar:  ");
+		int i = enome.nextInt();
+		i--;
+		
+		Aluno a = alunos.get(i);
+		
+		System.out.println(a.getMatricula()+ ", modifica para:");
+		a.setMatricula(ematricula.next());
+		
+		
+		
+		System.out.println(a.getMatricula()+ ", modifica para:");
+		a.setNome(enome.nextLine());
+		
+		System.out.println("\nAluno foi Alterado: ");
+		
+		
 		
 		
 	}
