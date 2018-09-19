@@ -67,8 +67,8 @@ public class Academico {
 		
 		
 		
-		System.out.println(a.getMatricula()+ ", modifica para:");
-		a.setNome(enome.nextLine());
+		System.out.println(a.getNome()+ ", modifica para:");
+		a.setNome(enome.next());
 		
 		System.out.println("\nAluno foi Alterado: ");
 		
