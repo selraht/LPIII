@@ -1,5 +1,5 @@
 
-public class Livro {
+public class Livro  extends ItemAcervo {
 
 	private String titulo;
 	private String autor;

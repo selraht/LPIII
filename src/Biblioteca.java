@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class Biblioteca {
 	private	ArrayList<Aluno> alunos = new ArrayList<Aluno>(); 
-	private ArrayList<Livro> livros = new ArrayList<Livro>();
+	//private	ArrayList<Livro> livros = new ArrayList<Livro>(); 
+	private ArrayList<ItemAcervo> itensAcervo = new ArrayList<ItemAcervo>();
 	private ArrayList<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
 	
 		public void cadastrarAluno(){
@@ -51,9 +52,38 @@ public class Biblioteca {
 		System.out.println("Informe o nome da Editora: ");
 		livro.setEditora(deditora.nextLine());
 		
-		livros.add(livro);                           
+		itensAcervo.add(livro);                           		
+	}
+	
+	public void cadastrarRevista(){
+		Revista revista = new Revista();
+		
+		Scanner anumero = new Scanner(System.in);
+		Scanner bano= new Scanner(System.in);
+		Scanner cpublicacao = new Scanner(System.in);
+		Scanner dnome= new Scanner(System.in);
+		Scanner etitulo= new Scanner(System.in);
+		Scanner feditora= new Scanner(System.in);
+		
+		
+		System.out.println("Digite um numero: ");
+		revista.setNumero(anumero.nextLine());
+		
+		System.out.println("Informe o Ano: ");
+		revista.setAno(bano.nextLine());
+		
+		System.out.println("Informe o ano da publicação: ");
+		revista.setPublicacao(cpublicacao.next());
+		
+		System.out.println("Informe o nome da Revista: ");
+		revista.setEditora(dnome.nextLine());
+		
+		itensAcervo.add(revista);                           
 			
 	}
+	
+	
+	
 	
 	public void listarAlunos(){ 
 		System.out.println("Lista de Alunos");
@@ -64,8 +94,8 @@ public class Biblioteca {
 	
 	public void listarLivros(){ 
 		System.out.println("Lista de Livros");
-		for(int i=0; i<livros.size(); i++){	                       
-			System.out.println((i+1)+ "," + livros.get(i));
+		for(int i=0; i<itensAcervo.size(); i++){	                       
+			System.out.println((i+1)+ "," + itensAcervo.get(i));
 		}
 	}
 	public void emprestarLivro(){	
@@ -77,7 +107,7 @@ public class Biblioteca {
 		System.out.println("Informe o id do Aluno: ");
 		emp.setAluno(alunos.get(a.nextInt()-1));
 		System.out.println("Informe o id do Livro: ");
-		emp.setLivro(livros.get(a.nextInt()-1));
+		emp.setLivro(itensAcervo.get(a.nextInt()-1));
 		System.out.println("Informe a data de emprestimos: ");
 		emp.setDataEmprestimo(b.next());
 		emp.setStatus(1);
