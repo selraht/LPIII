@@ -44,5 +44,11 @@ public class Revista extends ItemAcervo {
 	public void setEditora(String editora) {
 		this.editora = editora;
 	}
+	@Override
+	public String toString() {
+		return "Revista [numero=" + numero + ", ano=" + ano + ", publicacao=" + publicacao + ", nome=" + nome
+				+ ", titulo=" + titulo + ", editora=" + editora + "]";
+	}
+	
 	
 }

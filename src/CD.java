@@ -21,6 +21,10 @@ public class CD extends ItemAcervo {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+	@Override
+	public String toString() {
+		return "CD [titulo=" + titulo + ", artista=" + artista + ", categoria=" + categoria + "]";
+	}
 	
 
 }

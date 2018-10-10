@@ -29,7 +29,9 @@ public class DVD extends ItemAcervo {
 	public void setDiretor(String diretor) {
 		this.diretor = diretor;
 	}
+	@Override
+	public String toString() {
+		return "DVD [titulo=" + titulo + ", sinopse=" + sinopse + ", atores=" + atores + ", diretor=" + diretor + "]";
+	}
 	
-	
-
 }

@@ -67,13 +67,13 @@ public class Biblioteca {
 		
 		
 		System.out.println("Digite um numero: ");
-		revista.setNumero(anumero.nextLine());
+		revista.setNumero(anumero.next());
 		
 		System.out.println("Informe o Ano: ");
-		revista.setAno(bano.nextLine());
+		revista.setAno(bano.next());
 		
 		System.out.println("Informe o ano da publicação: ");
-		revista.setPublicacao(cpublicacao.next());
+		revista.setPublicacao(cpublicacao.nextLine());
 		
 		System.out.println("Informe o nome da Revista: ");
 		revista.setEditora(dnome.nextLine());
@@ -81,9 +81,69 @@ public class Biblioteca {
 		itensAcervo.add(revista);                           
 			
 	}
+	public void cadastrarCD(){
+		CD cd = new CD();
+		
+		Scanner titulo = new Scanner(System.in);
+		Scanner artista= new Scanner(System.in);
+		Scanner categoria = new Scanner(System.in);
+				
+		System.out.println("Digite o titulo do CD: ");
+		cd.setTitulo(titulo.nextLine());
+		
+		System.out.println("Informe o Nome do Artista do CD: ");
+		cd.setArtista(artista.nextLine());
+		
+		System.out.println("Informe a categoria deste CD: ");
+		cd.setCategoria(categoria.nextLine());
+			
+		itensAcervo.add(cd);                           		
+	}
 	
-	
-	
+	public void cadastrarDVD(){
+		DVD dvd = new DVD();
+		
+		Scanner titulo = new Scanner(System.in);
+		Scanner sinopse = new Scanner(System.in);
+		Scanner atores= new Scanner(System.in);
+		Scanner diretor = new Scanner(System.in);
+				
+		System.out.println("Digite o titulo do DVD: ");
+		dvd.setTitulo(titulo.nextLine());
+		
+		System.out.println("Informe A Sinopese do DVD: ");
+		dvd.setSinopse(sinopse.nextLine());
+		
+		System.out.println("Informe os Atores do DVD: ");
+		dvd.setAtores(atores.nextLine());
+		
+		System.out.println("Informe o Diretor: ");
+		dvd.setDiretor(diretor.nextLine());
+			
+		itensAcervo.add(dvd);                           		
+	}
+	public void cadastrarArtigo(){
+		Artigo artigo = new Artigo();
+		
+		Scanner titulo = new Scanner(System.in);
+		Scanner autor = new Scanner(System.in);
+		Scanner ano= new Scanner(System.in);
+		Scanner periodo = new Scanner(System.in);
+				
+		System.out.println("Digite o titulo do artigo: ");
+		artigo.setTitulo(titulo.nextLine());
+		
+		System.out.println("Informe o nome do autor do artigo: ");
+		artigo.setAutor(autor.nextLine());
+		
+		System.out.println("Informe o ano do artigo: ");
+		artigo.setAno(ano.nextLine());
+		
+		System.out.println("Informe o Perido do artigo: ");
+		artigo.setPeriodo(periodo.nextLine());
+			
+		itensAcervo.add(artigo);                           		
+	}
 	
 	public void listarAlunos(){ 
 		System.out.println("Lista de Alunos");
@@ -92,25 +152,25 @@ public class Biblioteca {
 		}
 	}
 	
-	public void listarLivros(){ 
-		System.out.println("Lista de Livros");
+	public void listarItensAcervo(){ 
+		System.out.println("Lista de Itens Acervo");
 		for(int i=0; i<itensAcervo.size(); i++){	                       
 			System.out.println((i+1)+ "," + itensAcervo.get(i));
 		}
 	}
-	public void emprestarLivro(){	
+	public void emprestarItens(){	
 		listarAlunos();
-		listarLivros();
+		listarItensAcervo();
 		Scanner a = new Scanner(System.in);
 		Scanner b = new Scanner(System.in);
 		Emprestimo emp = new Emprestimo();
 		System.out.println("Informe o id do Aluno: ");
 		emp.setAluno(alunos.get(a.nextInt()-1));
-		System.out.println("Informe o id do Livro: ");
-		emp.setLivro(itensAcervo.get(a.nextInt()-1));
+		System.out.println("Informe o id do Item: ");
+		emp.setItemAcervo(itensAcervo.get(a.nextInt()-1));
 		System.out.println("Informe a data de emprestimos: ");
 		emp.setDataEmprestimo(b.next());
-		emp.setStatus(1);
+		emp.setStatus(Emprestimo.EMPRESTADO);
 		emprestimos.add(emp);
 		
 	}
@@ -123,16 +183,17 @@ public class Biblioteca {
 		}
 	}
 	
-	public void devolverlivro(){ 
+	public void devolveritem(){ 
 		listaremprestimo();
 		Scanner a = new Scanner(System.in);
 		Scanner b = new Scanner(System.in);
 		
-		System.out.println("Digite a id do Livro que deseja devolver");
+		System.out.println("Digite a id do Item que deseja devolver");
 		Emprestimo emp = emprestimos.get(a.nextInt()-1);
 		
 		System.out.println("Informe a data de devolução");
-		emp.setDataDevoluca(b.next());	
+		emp.setDataDevoluca(b.next());
+		emp.setStatus(Emprestimo.DEVOLVIDO);
 		}
 	}
 	

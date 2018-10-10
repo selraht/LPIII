@@ -29,5 +29,9 @@ public class Artigo extends ItemAcervo {
 	public void setPeriodo(String periodo) {
 		this.periodo = periodo;
 	}
+	@Override
+	public String toString() {
+		return "Artigo [titulo=" + titulo + ", autor=" + autor + ", ano=" + ano + ", periodo=" + periodo + "]";
+	}
 	
 }

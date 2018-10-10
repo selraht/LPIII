@@ -18,11 +18,11 @@ public class Emprestimo {
 		this.aluno = aluno;
 	}
 
-	public ItemAcervo getLivro() {
+	public ItemAcervo getItemAcervo() {
 		return itemAcervo;
 	}
 
-	public void setLivro(ItemAcervo itemAcervo) {
+	public void setItemAcervo(ItemAcervo itemAcervo) {
 		this.itemAcervo = itemAcervo;
 	}
 
