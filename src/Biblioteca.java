@@ -7,7 +7,7 @@ public class Biblioteca {
 	private ArrayList<ItemAcervo> itensAcervo = new ArrayList<ItemAcervo>();
 	private ArrayList<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
 	
-		public void cadastrarAluno(){
+	public void cadastrarAluno(){
 			
 			Aluno aluno = new Aluno();
 			
@@ -54,7 +54,6 @@ public class Biblioteca {
 		
 		itensAcervo.add(livro);                           		
 	}
-	
 	public void cadastrarRevista(){
 		Revista revista = new Revista();
 		
@@ -99,7 +98,6 @@ public class Biblioteca {
 			
 		itensAcervo.add(cd);                           		
 	}
-	
 	public void cadastrarDVD(){
 		DVD dvd = new DVD();
 		
@@ -144,14 +142,12 @@ public class Biblioteca {
 			
 		itensAcervo.add(artigo);                           		
 	}
-	
 	public void listarAlunos(){ 
 		System.out.println("Lista de Alunos");
 		for(int i=0; i<alunos.size(); i++){	                       
 			System.out.println((i+1)+ "," + alunos.get(i));
 		}
 	}
-	
 	public void listarItensAcervo(){ 
 		System.out.println("Lista de Itens Acervo");
 		for(int i=0; i<itensAcervo.size(); i++){	                       
@@ -174,27 +170,20 @@ public class Biblioteca {
 		emprestimos.add(emp);
 		
 	}
-	
 	public void listarEmprestados(){
-		
 		System.out.println("Lista de emprestados");
 		for(int i=0; i<emprestimos.size(); i++){
 			if(emprestimos.get(i).getStatus()==Emprestimo.EMPRESTADO){
 			System.out.println((i+1)+ "," + emprestimos.get(i));
 			}
 		}
-	}
-	
+	}	
 	public void listaremprestimo(){ 
 		System.out.println("Lista de emprestimos");
 		for(int i=0; i<emprestimos.size(); i++){	
-			System.out.println((i+1)+ "," + emprestimos.get(i));
-			
+			System.out.println((i+1)+ "," + emprestimos.get(i));	
 		}
-	}
-	
-	
-	
+	}	
 	public void devolveritem(){ 
 		listaremprestimo();
 		Scanner a = new Scanner(System.in);
