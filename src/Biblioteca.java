@@ -128,7 +128,7 @@ public class Biblioteca {
 		Scanner titulo = new Scanner(System.in);
 		Scanner autor = new Scanner(System.in);
 		Scanner ano= new Scanner(System.in);
-		Scanner periodo = new Scanner(System.in);
+		Scanner periodico = new Scanner(System.in);
 				
 		System.out.println("Digite o titulo do artigo: ");
 		artigo.setTitulo(titulo.nextLine());
@@ -140,7 +140,7 @@ public class Biblioteca {
 		artigo.setAno(ano.nextLine());
 		
 		System.out.println("Informe o Perido do artigo: ");
-		artigo.setPeriodo(periodo.nextLine());
+		artigo.setPeriodico(periodico.nextLine());
 			
 		itensAcervo.add(artigo);                           		
 	}
@@ -175,13 +175,25 @@ public class Biblioteca {
 		
 	}
 	
+	public void listarEmprestados(){
+		
+		System.out.println("Lista de emprestados");
+		for(int i=0; i<emprestimos.size(); i++){
+			if(emprestimos.get(i).getStatus()==Emprestimo.EMPRESTADO){
+			System.out.println((i+1)+ "," + emprestimos.get(i));
+			}
+		}
+	}
+	
 	public void listaremprestimo(){ 
 		System.out.println("Lista de emprestimos");
-		for(int i=0; i<emprestimos.size(); i++){	                       
+		for(int i=0; i<emprestimos.size(); i++){	
 			System.out.println((i+1)+ "," + emprestimos.get(i));
 			
 		}
 	}
+	
+	
 	
 	public void devolveritem(){ 
 		listaremprestimo();

@@ -11,7 +11,7 @@ public class SistemaBiblioteca {
 		Scanner e = new Scanner(System.in);
 		do{
 			System.out.println("\nSistema de Biblioteca:\n");
-			System.out.println("1-Cadastrar aluno \n2-Listar Aluno \n3-Cadastrar Livro  \n4-Listar Itens Acervo \n5-Emprestar Itens \n6-Listar Emprestimo \n7-Devolver Item  \n8-Cadastrar Revista \n9-Cadastrar CD \n10-Cadastrar DVD \n11-Cadastrar Artigo");
+			System.out.println("1-Cadastrar aluno \n2-Listar Aluno \n3-Cadastrar Livro  \n4-Listar Itens Acervo \n5-Emprestar Itens \n6-Listar Emprestimo \n7-Devolver Item  \n8-Cadastrar Revista \n9-Cadastrar CD \n10-Cadastrar DVD \n11-Cadastrar Artigo \n12-Listar Emprestados");
 			System.out.print("\nDigite sua Opção:");
 			opção =e.nextInt();
 			switch( opção )
@@ -51,12 +51,15 @@ public class SistemaBiblioteca {
 			    case 11:
 			    	biblioteca.cadastrarArtigo();
 		            	break;
+			    case 12:
+			    	biblioteca.listarEmprestados();
+		            	break;
 		             
 			    default:
 			    	           
 			}
 		
-		}while(opção<12);
+		}while(opção<13);
 	}
 
 }
